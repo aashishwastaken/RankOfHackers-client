@@ -3,9 +3,9 @@
   padding: 2px;
   margin: 2px;
 }
-/* body{
-  background-image: url("");
-} */
+body{
+  background-image: url("https://raw.githubusercontent.com/aashishwastaken/RankOfHackers-client/main/public/background.jpg");
+}
 
 .header{
   display:flex;
