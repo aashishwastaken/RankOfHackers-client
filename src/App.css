@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+  padding: 2px;
+  margin: 2px;
+}
+/* body{
+  background-image: url("");
+} */
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  background-color: #66004d;
+}
+.header a{
+  color: #fff;
+  text-decoration: none;
+}
+.title{
+  margin: 0.5em;
+}
+.register{
+  text-align:center;
+}
+.register input{
+  /* display:block; */
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mar-pad-2{
+  padding: 2px;
+  margin: 2px;
+}
+
+input{
+  width: 100%;
+}
+
+img{
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+}
+.profile{
+  width: 8em;
+  height: 8em;
+  margin:auto !important ;
+}
+
+.card{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  padding:1em;
+}
+
+.home{
+justify-content: space-around !important;
+margin: 0.8em;
+padding: 5px;
+}
+
+.wrapper{
+  width: 30vw;
+  height: 80vh;
+  overflow-y: scroll;
+  padding:1em;
+}
+
+.details{
+  height: 80vh;
+  width: 30vw;
+  border: 2px solid black;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center;
+  margin:0.8em;
+  padding: 5px;
+}
+.hacker-detail{
+  width: 100%;
+  justify-content: flex-start !important;
+}
