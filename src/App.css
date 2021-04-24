@@ -4,6 +4,7 @@
   margin: 2px;
 }
 body{
+  color:white;
   background-image: url("https://raw.githubusercontent.com/aashishwastaken/RankOfHackers-client/main/public/background.jpg");
 }
 
@@ -11,7 +12,7 @@ body{
   display:flex;
   align-items:center;
   justify-content: space-between;
-  background-color: #66004d;
+  background-color: #35f15e;
 }
 .header a{
   color: #fff;
@@ -68,6 +69,7 @@ img{
   width: 100%;
   cursor: pointer;
   padding:1em;
+  color:black;
 }
 
 .home{
@@ -94,8 +96,11 @@ padding: 5px;
   align-items: center;
   margin:0.8em;
   padding: 5px;
+  background-color: white;
+  color:black;
 }
 .hacker-detail{
   width: 100%;
   justify-content: flex-start !important;
+  color:black;
 }

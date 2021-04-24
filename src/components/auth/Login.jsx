@@ -54,7 +54,7 @@ function Login() {
                 <Switch
                     checked={adminOrNot}
                     onChange={handleSwitch}
-                    color="primary"
+                    color="secondary"
                     name="switch"
                     inputProps={{ 'aria-label': 'primary checkbox' }}
                 /></div>

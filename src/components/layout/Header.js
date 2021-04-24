@@ -8,8 +8,9 @@ class Header extends Component {
         return ( 
             <header className="header">
                 <Link to="/">
-                    <img alt="background" src="https://raw.githubusercontent.com/aashishwastaken/RankOfHackers-client/4340e639ae34a517effdb143ec74d48f37f2c954/public/favicon.svg" style={{width:'2em',height:'2em'}} />
-                    <h1 className="title">Rank Of Hackers</h1></Link>
+                  <div className="row" style={{fontSize:'2em', padding:'10px'}}>  <img alt="background" src="https://raw.githubusercontent.com/aashishwastaken/RankOfHackers-client/4340e639ae34a517effdb143ec74d48f37f2c954/public/favicon.svg" style={{width:'2em',height:'2em'}} />
+                    <p className="title">Rank Of Hackers</p></div>
+                    </Link>
                 <AuthOptions />
             </header>
          );
