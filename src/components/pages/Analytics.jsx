@@ -20,7 +20,7 @@ export default function Analytics() {
 
         let fetchCpp = async () => {
             if (token) {
-                let cpp = await axios.get('http://localhost:5000/hackers/cpp', { headers: { "x-auth-token": token } });
+                let cpp = await axios.get(`${process.env.REACT_APP_BASE_URL}hackers/cpp`, { headers: { "x-auth-token": token } });
                console.log(cpp);
                 let data1=cpp.data.map(x =>[x.name,x.cpp] );
 
@@ -51,7 +51,7 @@ export default function Analytics() {
         }
         let fetchRecent= async () => {
             if (token) {
-                let rec = await axios.get('http://localhost:5000/hackers/recent/10', { headers: { "x-auth-token": token } });
+                let rec = await axios.get(`${process.env.REACT_APP_BASE_URL}hackers/recent/10`, { headers: { "x-auth-token": token } });
                
                 await setRecent(rec.data.map(x => (
                     <div key={x._id} className=" card" >
@@ -68,7 +68,7 @@ export default function Analytics() {
         }
         let fetchTop10 = async () => {
             if (token) {
-                let top = await axios.get('http://localhost:5000/hackers/top/10', { headers: { "x-auth-token": token } });
+                let top = await axios.get(`${process.env.REACT_APP_BASE_URL}hackers/top/10`, { headers: { "x-auth-token": token } });
                
                 await setTop10(top.data.map(x => (
                     <div key={x._id} className=" card" >
@@ -82,7 +82,7 @@ export default function Analytics() {
         }
         let fetchDevices = async () => {
             if (token) {
-                let device = await axios.get('http://localhost:5000/users/device', { headers: { "x-auth-token": token } });
+                let device = await axios.get(`${process.env.REACT_APP_BASE_URL}users/device`, { headers: { "x-auth-token": token } });
                
                 await setDevices(<Chart
                     width={'500px'}

@@ -15,7 +15,7 @@ export default function AllHackers() {
 
         let fetchHackers = async () => {
             if (token) {
-                let hackers = await axios.get('http://localhost:5000/hackers/all', { headers: { "x-auth-token": token } });
+                let hackers = await axios.get(`${process.env.REACT_APP_BASE_URL}hackers/all`, { headers: { "x-auth-token": token } });
                 console.log(hackers.data);
                 await setHackers(hackers.data.map(x => (
                     <div key={x._id} className=" card" onClick={() => show(x._id)}>
@@ -29,7 +29,7 @@ export default function AllHackers() {
         }
         let fetchTop3 = async () => {
             if (token) {
-                let hackers = await axios.get('http://localhost:5000/hackers/top/3', { headers: { "x-auth-token": token } });
+                let hackers = await axios.get(`${process.env.REACT_APP_BASE_URL}hackers/top/3`, { headers: { "x-auth-token": token } });
                 console.log(hackers.data);
                 await setTop3Hackers(hackers.data.map(x => (
                     <div key={x._id} className=" card" onClick={() => show(x._id)}>
@@ -51,7 +51,7 @@ export default function AllHackers() {
 
     let show = async (id) => {
 
-        let details = await axios.get(`http://localhost:5000/hackers/${id}`, { headers: { "x-auth-token": userData.token } });
+        let details = await axios.get(`${process.env.REACT_APP_BASE_URL}hackers/${id}`, { headers: { "x-auth-token": userData.token } });
         setChildren(details.data);
         setChildrenKeys(Object.keys(details.data));
     }

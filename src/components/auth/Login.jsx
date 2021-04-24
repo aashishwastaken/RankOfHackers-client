@@ -26,10 +26,10 @@ function Login() {
             const loginUser = { email, password };
             let loginResponse ;
             if(adminOrNot){
-             loginResponse = await axios.post("http://localhost:5000/admins/login", loginUser);
+             loginResponse = await axios.post(`${process.env.REACT_APP_BASE_URL}admins/login`, loginUser);
             }
             else{
-             loginResponse = await axios.post("http://localhost:5000/users/login", loginUser);
+             loginResponse = await axios.post(`${process.env.REACT_APP_BASE_URL}users/login`, loginUser);
             }
 
             setUserData({
